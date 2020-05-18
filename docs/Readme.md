@@ -82,3 +82,10 @@ This repository is tested under Unity version 2018.4.8f1 LTS. You could obtain a
                    `▀█▓▓▓▓▓▓▓▓▓▌
                         ¬`▀▀▀█▓
    ```
+
+## Switch to Hierarchical Trainer
+1. Modify the number of observation of Brain in Unity
+2. Export a new executable
+3. Rename 'ppo.hca' folder to 'ppo' folder.
+4. Rename one of 'trainer_HRL.py' to 'trainer.py' in ppo folder. 
+5. Restart the traing as above steps
