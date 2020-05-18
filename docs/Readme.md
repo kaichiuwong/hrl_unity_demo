@@ -1,8 +1,14 @@
 # Demonstration of Hierarchical and Non-Hierarchical Multi-Agent Interactions Based on Unity Reinforcement Learning
 
 ## Installation & Set-up
-**Environment Requirements
-- Unity 2018.4.8f1
+
+**Environment Requirements**
+It is recommended to use Anaconda to manage to python packages. For details on installing Anaconda, please go to [Anaconda Installation Guide](https://docs.anaconda.com/anaconda/install/)
+
+**Unity Environment**
+This repository is tested under Unity version 2018.4.8f1 LTS. You could obtain a license from [Unity Download](https://unity3d.com/get-unity/download) to get a copy of Unity.
+
+**Python Packages**
 - Python 3.6
 - mlagents 0.5.0
 - tensorflow 1.7.1
@@ -44,7 +50,35 @@
 |Manager Observation|Eight types of object detection, with distance information in 270 degree of view (200 variables)|
 
 
-## Open the Demonstration Scenarios
+## Test the Demonstration Scenarios
 
-## Training
 
+## Training a Scenario
+1. You can train a scenario by using `mlagents-learn` command from Unity ML Agent toolkits
+2. Open terminal 
+3. Change directory to the folder of ML-Agents Toolkit. It is usually under `ml-agents/` folder.
+4. Run `mlagents-learn <trainer-config-file> --env=<env_name> --run-id=<run-identifier>`
+   - `<trainer-config-file>` a YAML file that storing the scenario configuration
+   - `env_name` the name of the scenario, usually is the executable name from Unity export
+   - `<run-identifier>` a string to identify your run
+   E.g.
+   ```
+   mlagents-learn config/ppo/Tennis.yaml --env=Tennis --run-id=tennis_run
+   ```
+5. After the command is triggered, you could see the following screen. It indicates that the training is started.
+   ```
+
+
+                        ▄▄▄▓▓▓▓
+                   ╓▓▓▓▓▓▓█▓▓▓▓▓
+              ,▄▄▄m▀▀▀'  ,▓▓▓▀▓▓▄                           ▓▓▓  ▓▓▌
+            ▄▓▓▓▀'      ▄▓▓▀  ▓▓▓      ▄▄     ▄▄ ,▄▄ ▄▄▄▄   ,▄▄ ▄▓▓▌▄ ▄▄▄    ,▄▄
+          ▄▓▓▓▀        ▄▓▓▀   ▐▓▓▌     ▓▓▌   ▐▓▓ ▐▓▓▓▀▀▀▓▓▌ ▓▓▓ ▀▓▓▌▀ ^▓▓▌  ╒▓▓▌
+        ▄▓▓▓▓▓▄▄▄▄▄▄▄▄▓▓▓      ▓▀      ▓▓▌   ▐▓▓ ▐▓▓    ▓▓▓ ▓▓▓  ▓▓▌   ▐▓▓▄ ▓▓▌
+        ▀▓▓▓▓▀▀▀▀▀▀▀▀▀▀▓▓▄     ▓▓      ▓▓▌   ▐▓▓ ▐▓▓    ▓▓▓ ▓▓▓  ▓▓▌    ▐▓▓▐▓▓
+          ^█▓▓▓        ▀▓▓▄   ▐▓▓▌     ▓▓▓▓▄▓▓▓▓ ▐▓▓    ▓▓▓ ▓▓▓  ▓▓▓▄    ▓▓▓▓`
+            '▀▓▓▓▄      ^▓▓▓  ▓▓▓       └▀▀▀▀ ▀▀ ^▀▀    `▀▀ `▀▀   '▀▀    ▐▓▓▌
+               ▀▀▀▀▓▄▄▄   ▓▓▓▓▓▓,                                      ▓▓▓▓▀
+                   `▀█▓▓▓▓▓▓▓▓▓▌
+                        ¬`▀▀▀█▓
+   ```
