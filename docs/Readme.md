@@ -1,6 +1,12 @@
 # Demonstration of Hierarchical and Non-Hierarchical Multi-Agent Interactions Based on Unity Reinforcement Learning
 
 ## Installation & Set-up
+**Environment Requirement
+* Unity 2018.4.8f1
+* Python 3.6
+* mlagents 0.5.0
+* tensorflow 1.7.1
+
 **Settings of the Crawler Scenario** 
 |Setting|Description|
 | --- | --- |
