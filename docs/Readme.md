@@ -88,4 +88,10 @@ This repository is tested under Unity version 2018.4.8f1 LTS. You could obtain a
 2. Export a new executable
 3. Rename 'ppo.hca' folder to 'ppo' folder.
 4. Rename one of 'trainer_HRL.py' to 'trainer.py' in ppo folder. 
-5. Restart the traing as above steps
+5. Restart the training as above steps
+
+## Switch back to Original Trainer
+1. Modify the number of observation of Brain in Unity back to the original setting
+2. Export a new executable
+3. Rename 'ppo.org' folder to 'ppo' folder.
+4. Restart the training as above steps
