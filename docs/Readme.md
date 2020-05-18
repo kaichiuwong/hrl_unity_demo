@@ -51,7 +51,11 @@ This repository is tested under Unity version 2018.4.8f1 LTS. You could obtain a
 
 
 ## Test the Demonstration Scenarios
+1. Open the Scenario in Unity
+2. Assume the Tennis scenario is opened. In the Project window, go to Assets/ML-Agents/Examples/Tennis/Brains folder and drag the Tennis Brain to the Brains property under Braodcast Hub in the TennisAcademy object in the Inspector window. It is to make sure the trained Brain is assigned to the agent.
+3. Click the Play button in Unity to start the test.
 
+**Note**: Assigning a Brain to an agent (dragging a Brain into the Brain property of the agent) means that the Brain will be making decision for that agent. Whereas dragging a Brain into the Broadcast Hub means that the Brain will be exposed to the Python process. The Control checkbox means that in addition to being exposed to Python, the Brain will be controlled by the Python process (*required for training*).
 
 ## Training a Scenario
 1. You can train a scenario by using `mlagents-learn` command from Unity ML Agent toolkits
@@ -84,14 +88,14 @@ This repository is tested under Unity version 2018.4.8f1 LTS. You could obtain a
    ```
 
 ## Switch to Hierarchical Trainer
-1. Modify the number of observation of Brain in Unity
+1. Modify the number of observation of Brain in Unity with the Manager Observation
 2. Export a new executable
 3. Rename 'ppo.hca' folder to 'ppo' folder.
 4. Rename one of 'trainer_HRL.py' to 'trainer.py' in ppo folder. 
 5. Restart the training as above steps
 
 ## Switch back to Original Trainer
-1. Modify the number of observation of Brain in Unity back to the original setting
+1. Modify the number of observation of Brain in Unity back to the original setting (Without Manager Observation)
 2. Export a new executable
 3. Rename 'ppo.org' folder to 'ppo' folder.
 4. Restart the training as above steps
